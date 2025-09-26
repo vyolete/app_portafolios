@@ -17,7 +17,7 @@ import yfinance as yf
 st.title ("Mi primera aplicacion en Streamlit 🚀")
 
 # Lista de ticker incial
-lista_tickers = ["AAPL","MSFT","NVDA"]
+lista_tickers = ["AAPL","MSFT","NVDA","META"]
 
 #Selector
 
