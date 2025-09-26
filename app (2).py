@@ -26,5 +26,5 @@ ticker=st.selectbox("Elija un ticker",lista_tickers)
 # Botón
 
 if st.button("Descargar"):
-  data=yf.download(ticker,period="1mo")
+  data=yf.download(ticker,period="1mo")[Close]
   st.dataframe(data)
