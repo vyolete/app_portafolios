@@ -23,9 +23,14 @@ lista_tickers = ["AAPL","MSFT","NVDA","META"]
 
 ticker=st.multiselect("Elija un ticker o varios",lista_tickers)
 
-# Botón
+# Botón descargar datos yfinance
 
 if st.button("Descargar"):
   data=yf.download(ticker,period="1mo")["Close"]
   st.subheader("📋 Precios de cierre")
   st.dataframe(data)
+            
+  st.subheader("📈 Evolución del precio de cierre")
+  st.line_chart(data)
+else:
+  st.warning("Seleccione al menos un ticker para continuar.")
